@@ -5,16 +5,21 @@
 // - A score below 0 or above 100 gives "Invalid".
 
 function getGrade(score) {
-  // your code
+  if (score < 0 || score > 100) return "Invalid";
+  if (score >= 90) return "A";
+  if (score >= 80) return "B";
+  if (score >= 70) return "C";
+  if (score >= 60) return "D";
+  return "F";
 }
 
 // Expected output:
-console.log(getGrade(95));   // "A"
-console.log(getGrade(90));   // "A"
-console.log(getGrade(85));   // "B"
-console.log(getGrade(72));   // "C"
-console.log(getGrade(65));   // "D"
-console.log(getGrade(30));   // "F"
-console.log(getGrade(0));    // "F"
-console.log(getGrade(101));  // "Invalid"
-console.log(getGrade(-5));   // "Invalid"
+console.log(getGrade(95)); // "A"
+console.log(getGrade(90)); // "A"
+console.log(getGrade(85)); // "B"
+console.log(getGrade(72)); // "C"
+console.log(getGrade(65)); // "D"
+console.log(getGrade(30)); // "F"
+console.log(getGrade(0)); // "F"
+console.log(getGrade(101)); // "Invalid"
+console.log(getGrade(-5)); // "Invalid"

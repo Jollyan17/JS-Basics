@@ -5,7 +5,13 @@
 // - Any number to the power of 0 is 1.
 
 function power(base, exponent) {
-  // your code
+  // your code 
+  let result = 1;
+  const count = Math.abs(exponent);
+  for (let i = 0; i < count; i++) {
+    result *= base;
+  }
+  return exponent < 0 ? 1 / result : result;
 }
 
 // Expected output:
